@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+    <!--Metadatos de los documentos HTML5-->
+    <meta name="author" content="Sara Fernández Arias" />
+    <meta name="description" content="Html empleado para el ejercicio cuarto de la práctica 3" />
+    <meta name="keywords" content="javascript,uniovi,software,ecmascript,calculator" />
+
+    <!--Definición de la ventana gráfica-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>calculadora científica</title>
+    <!-- añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
+    <link rel="stylesheet" type="text/css" href="CalculadoraCientifica.css" />
+    <script src="CalculadoraCientifica.js"></script>
+</head>
+
+<body>
+    <form name="formulario">
+        <label for="pantalla">Calculadora científica</label>
+        <input type="text" id="pantalla" name="pantalla" readonly>
+
+        <input type="button" value="DEG" onclick="calculadoraCientifica.grados()" name="deg">
+        <input type="button" value="HYP" onclick=" calculadoraCientifica.hiperbolica( )" name="hyp">
+        <input type="button" value="F-E" onclick=" calculadoraCientifica.fe( )" name="fe">
+        <!--Memoria-->
+        <input type="button" value="MC" onclick=" calculadoraCientifica.borrarMemoria()" name="mc" disabled>
+        <input type="button" value="MR" onclick=" calculadoraCientifica.recuperarMemoria()" name="mr" disabled>
+        <input type="button" value="M-" onclick=" calculadoraCientifica.restarMemoria()" name="mrestar">
+        <input type="button" value="M+" onclick=" calculadoraCientifica.sumarMemoria()" name="msumar">
+        <input type="button" value="MS" onclick=" calculadoraCientifica.almacenarEnMemoria()" name="ms">
+
+        <!--Primera fila-->
+        <input type="button" value="x&#178;" onclick=" calculadoraCientifica.cuadrado( )" name="cuadrado">
+        <input type="button" value="x^y" onclick=" calculadoraCientifica.potenciaDeXBaseY()" name="potencia">
+        <input type="button" value="sin" onclick=" calculadoraCientifica.seno()" name="sin">
+        <input type="button" value="cos" onclick=" calculadoraCientifica.coseno( )" name="cos">
+        <input type="button" value="tan" onclick=" calculadoraCientifica.tangente()" name="tan">
+        <!--Segunda fila-->
+        <input type="button" value="√" onclick=" calculadoraCientifica.raizCuadrada()" name="sqrt">
+        <input type="button" value="10^x" onclick=" calculadoraCientifica.potenciaDeXBase10( )" name="baseDiez">
+        <input type="button" value="log" onclick=" calculadoraCientifica.log( )" name="log">
+        <input type="button" value="Exp" onclick="calculadoraCientifica.exp()" name="exp">
+        <input type="button" value="Mod" onclick="calculadoraCientifica.modulo()" name="mod">
+        <!--Tercera fila-->
+        <input type="button" value="&#8593;" onclick="calculadoraCientifica.shift()" name="shift">
+        <input type="button" value="CE" onclick=" calculadoraCientifica.borrarError( )" name="ce">
+        <input type="button" value="C" onclick="calculadoraCientifica.reiniciar()" name="c">
+        <input type="button" value="&#8656;" onclick=" calculadoraCientifica.borrarUltimoDigito()" name="borrarDigito">
+        <input type="button" value="&#247;" onclick=" calculadoraCientifica.division()" name="division">
+        <!--Cuarta fila-->
+
+        <input type="button" value="&#x3C0;" onclick=" calculadoraCientifica.mostrarPi()" name="pi">
+        <input type="button" value="7" onclick=" calculadoraCientifica.digitos(7)" name="7">
+        <input type="button" value="8" onclick=" calculadoraCientifica.digitos(8)" name="8">
+        <input type="button" value="9" onclick="calculadoraCientifica.digitos(9)" name="9">
+        <input type="button" value="x" onclick="calculadoraCientifica.multiplicacion()" name="multiplicacion">
+        <!--Quinta fila-->
+        <input type="button" value="n!" onclick=" calculadoraCientifica.factorial()" name="factorial">
+        <input type="button" value="4" onclick=" calculadoraCientifica.digitos(4)" name="4">
+        <input type="button" value="5" onclick=" calculadoraCientifica.digitos(5)" name="5">
+        <input type="button" value="6" onclick=" calculadoraCientifica.digitos(6)" name="6">
+        <input type="button" value="-" onclick="calculadoraCientifica.resta()" name="resta">
+
+        <!--Sexta fila-->
+
+
+        <input type="button" value="+/-" onclick=" calculadoraCientifica.cambioSigno( )" name="+-">
+        <input type="button" value="1" onclick=" calculadoraCientifica.digitos(1)" name="1">
+        <input type="button" value="2" onclick=" calculadoraCientifica.digitos(2)" name="2">
+        <input type="button" value="3" onclick=" calculadoraCientifica.digitos(3)" name="3">
+        <input type="button" value="+" onclick="calculadoraCientifica.suma()" name="suma">
+        <!--Séptima fila-->
+        <input type="button" value="(" onclick=" calculadoraCientifica.parentesisIzqdo()" name="(">
+        <input type="button" value=")" onclick=" calculadoraCientifica.parentesisDcho()" name=")">
+        <input type="button" value="0" onclick=" calculadoraCientifica.digitos(0)" name="0">
+        <input type="button" value="," onclick=" calculadoraCientifica.decimales()" name=",">
+        <input type="button" value="=" onclick=" calculadoraCientifica.igual()" name="=">
+
+    </form>
+    <footer>
+        <p>Hecho por Sara Fernández Arias</p>
+    </footer>
+</body>
+
+</html>

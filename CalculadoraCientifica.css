@@ -1,0 +1,91 @@
+/**********************
+  Sara Fernández Arias - UO269546
+  En este documento , se detalla la disposición de los diferentes elementos estructurales de la calculadora básica. 
+  En este, se indica su posicionamiento visual en la página.
+  Por lo general, en este documento se usarán medidas relativas al viewport,
+  descritas en CSS Values and Units Module Level 3, apartado 5.1.2
+  **********************/
+
+   /**Especificidad: 001 **/
+   label{
+
+    /*Hace que ocupe de la columna 1 a la 6 (en este caso, todas las columnas)*/
+    /*Produce un warning: Realmente, sí hay color de fondo, heredado de su elemento padre , en este caso , form.*/
+    font-style:italic;
+    grid-column: 1 / 6;
+    grid-row: 1 ;
+  }
+/**Especificidad: 011 **/
+input[type="text"]{
+  grid-column: 1 / 6;
+  grid-row: 2 /4;
+  padding:4vw;
+  margin:2vw;
+  background-color: #ABACAB;
+  font-size: 3em;
+  border-style:hidden;
+  text-align:right;
+/*Esta regla produce una advertencia por falta de color de primer plano. Este será heredado de el elemento form.*/
+}
+/**Especificidad: 011 **/
+input[type="button"]{ 
+ 
+  font-size: 1.2em;
+  padding:1.2vw;  
+  background-color:#EFEFEF;
+  border-style:hidden;
+/*Esta regla produce una advertencia por falta de color de primer plano. Este será heredado por defecto del elemento form*/
+ 
+}
+/**Especificidad: 011 **/
+input[name="fe"]{
+ 
+grid-column: 3/6;
+/*Produce un warning de redefinición de grid-row start&end al hacer que este botón ocupe más filas que las asignadas automáticamente*/
+justify-self: left;
+
+}
+
+/**Especificidad: 011 **/
+input[name="ms"],input[name="mc"],input[name="mr"],input[name="mrestar"],input[name="msumar"]{
+  grid-row: 5;
+
+}
+/**Especificidad: 011 **/
+input[name="ms"],input[name="mc"],input[name="mr"],input[name="mrestar"],input[name="msumar"],input[name="deg"],input[name="hyp"],input[name="fe"]{
+  font-size: 0.8em;
+  font-weight: bold;
+
+}
+
+/**Especificidad: 011 **/
+input[name="ms"],input[name="mc"],input[name="mr"],input[name="mrestar"],input[name="msumar"],input[name="deg"],input[name="hyp"],input[name="fe"]{
+/*Se producen ocho advertencias , una por cada selector, por falta de color de primer plano. Este será heredado por defecto del elemento form*/
+  background-color: #ABACAB;
+ 
+  border-style:hidden;
+
+}
+/**Especificidad: 011 **/
+input[name="0"],input[name=","],input[name="1"],input[name="2"],input[name="3"],input[name="4"],input[name="5"],input[name="6"],input[name="7"],input[name="8"],input[name="9"]{
+/*Se producen once advertencias, una por cada selector, por falta de color de primer plano. Este será heredado por defecto del elemento form*/
+  background-color: #ffffff;
+ }
+
+/**Especificidad: 001 **/
+form {
+    color:#000000;
+    display:grid;
+    background-color: #ABACAB;
+    grid-template-columns:repeat(5, 1fr);
+   
+    
+    
+}
+/**Especificidad: 001 **/ 
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+}
